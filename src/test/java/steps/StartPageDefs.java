@@ -43,5 +43,11 @@ public class StartPageDefs {
     public void checkUserNameVisibility() {
         startPage.contentInProfileIsVisible();
     }
+
+    @And("Click {string}")
+    public void click(String arg0) {
+        startPage.anotherUniversalButton(arg0);
+    }
+
 }
 

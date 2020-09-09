@@ -13,21 +13,28 @@ public class StarPage {
     }
 
     public void clickButtonSpan(String text) {
-        $(xpath("//button[text() = '" + text + "']")).click();
+        $(xpath("//span[text() = '" + text + "']/..")).click();
     }
 
-    public void clickProfileButton(){
+    public void clickProfileButton() {
         $(xpath("//button[@data-qa='mainmenu_applicantProfile ']")).click();
     }
 
+    public void universalButton(String text) {
+        $(xpath("//button[contains(text(), '" + text + "')]")).click();
+    }
+
+    public void anotherUniversalButton(String text) {
+        $(xpath("//*[contains(text(), '" + text + "')]")).click();
+    }
 
 
     public void contentIsVisible(String text) {
-        $(xpath("//*[text() = '" + text + "']")).shouldBe(Condition.visible);
+        $(xpath("//*[contains(text(), '" + text + "')]")).shouldBe(Condition.visible);
     }
 
     public void contentInProfileIsVisible() {
-        $(xpath("//*[text() = '" + UserConfig.USER_NAME +" "+ UserConfig.USER_LASTNAME + "']")).shouldBe(Condition.visible);
+        $(xpath("//*[text() = '" + UserConfig.USER_NAME + " " + UserConfig.USER_LASTNAME + "']")).shouldBe(Condition.visible);
 
     }
 
