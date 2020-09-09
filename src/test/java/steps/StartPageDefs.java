@@ -28,5 +28,20 @@ public class StartPageDefs {
     public void clickOnButton(String arg0) {
         startPage.clickButtonApplicant(arg0);
     }
+
+    @And("click {string} button")
+    public void clickLogInButton(String arg0) {
+        startPage.clickButtonSpan(arg0);
+    }
+
+    @Then("click profile button")
+    public void clickProfileButton() {
+        startPage.clickProfileButton();
+    }
+
+    @And("Check user name visibility")
+    public void checkUserNameVisibility() {
+        startPage.contentInProfileIsVisible();
+    }
 }
 

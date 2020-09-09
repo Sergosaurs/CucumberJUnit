@@ -28,4 +28,9 @@ public class SignUpPageDefs {
     public void checkVisibility(String arg0) {
         regPage.contentVisibility(arg0);
     }
+
+    @And("input password")
+    public void inputPassword() {
+        regPage.passwordInput(UserConfig.USER_PASSWORD);
+    }
 }
