@@ -1,53 +1,50 @@
 package steps;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.ru.*;
 import pages.StarPage;
 
 public class StartPageDefs {
 
     StarPage startPage = new StarPage();
 
-    @When("click the button {string}")
+    @И("жмем на кнопку {string}")
     public void clickButton(String arg0) {
         startPage.clickStarPageButton(arg0);
     }
 
-    @Then("Check content {string} visibility")
+    @Когда("видем надпись {string}")
     public void checkContent(String arg0) {
         startPage.contentIsVisible(arg0);
     }
 
-    @And("Click {string} button")
-    public void clickSignInButton(String arg0) {
-        startPage.clickButtonSpan(arg0);
-    }
+//    @And("Click {string} button")
+//    public void clickSignInButton(String arg0) {
+//        startPage.clickButtonSpan(arg0);
+//    }
 
-    @Then("Click on {string} button")
+    @То("жмем на {string} кнопку")
     public void clickOnButton(String arg0) {
         startPage.clickButtonApplicant(arg0);
     }
 
-    @And("click {string} button")
+    @Затем("жмем на {string}")
     public void clickLogInButton(String arg0) {
         startPage.clickButtonSpan(arg0);
     }
 
-    @Then("click profile button")
+    @И("жмем на иконку профиля")
     public void clickProfileButton() {
         startPage.clickProfileButton();
     }
 
-    @And("Check user name visibility")
+    @Тогда("проверяем имя введеное ранее")
     public void checkUserNameVisibility() {
         startPage.contentInProfileIsVisible();
     }
 
-    @And("Click {string}")
+    @И("нажимаем {string}")
     public void click(String arg0) {
         startPage.anotherUniversalButton(arg0);
     }
-
 }
 

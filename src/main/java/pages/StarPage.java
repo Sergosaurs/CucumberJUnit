@@ -30,7 +30,7 @@ public class StarPage {
 
 
     public void contentIsVisible(String text) {
-        $(xpath("//*[contains(text(), '" + text + "')]")).shouldBe(Condition.visible);
+        $(xpath("//*[contains(text(), '" + text + "') and ancestor::div]")).shouldBe(Condition.visible);
     }
 
     public void contentInProfileIsVisible() {

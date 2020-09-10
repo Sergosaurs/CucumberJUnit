@@ -1,14 +1,15 @@
-Feature: Create new account and execute actions with it
+# language: ru
+#3
+Функция: Создать аккаунт и с его помощью произвести действия на сайте
 
-  Scenario: Login with entered during registration data
+  Сценарий: Вход с введеными при регистрации даными
 
-    When click the button "Войти"
-    Then Check content "Регистрация" visibility
-    Then Input email or phone number
-    And input password
-    And click "Войти" button
-    And Check content "Найди работу мечты" visibility
-    Then click profile button
-    And Check user name visibility
-
+    И жмем на кнопку "Войти"
+    Когда видем надпись "Регистрация"
+    И вводим email
+    И вводим пароль
+    Затем нажимаем "Войти"
+    Когда видем надпись "Найди работу мечты"
+    И жмем на иконку профиля
+    Тогда проверяем имя введеное ранее
 
