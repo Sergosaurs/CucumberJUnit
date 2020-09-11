@@ -14,8 +14,6 @@ public class SignUpPage {
     private SelenideElement passwordInput = $(xpath("//input[@placeholder='Пароль']"));
 
 
-
-
     public void nameInput(String text) {
         this.nameInput.val(text);
     }
@@ -27,6 +25,7 @@ public class SignUpPage {
     public void emailOrPhoneNumberInput(String text) {
         this.emailOrPhoneNumberInput.val(text);
     }
+
     public void passwordInput(String text) {
         this.passwordInput.val(text);
     }

@@ -10,6 +10,10 @@ public class StartPageDefs {
     @И("жмем на кнопку {string}")
     public void clickButton(String arg0) {
         startPage.clickStarPageButton(arg0);
+
+    }@И("жмем {string}")
+    public void clickCreateResumeButton(String arg0) {
+        startPage.clickCreateResumeButton(arg0);
     }
 
     @Когда("видем надпись {string}")

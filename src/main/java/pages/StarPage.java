@@ -11,6 +11,9 @@ public class StarPage {
     public void clickStarPageButton(String text) {
         $(xpath("(//*[@data-qa=\"login\"])[2]")).click();
     }
+    public void clickCreateResumeButton(String text) {
+        $(xpath("(//*[@data-qa=\"signup\"])[2]")).click();
+    }
 
     public void clickButtonSpan(String text) {
         $(xpath("//span[text() = '" + text + "']/..")).click();
@@ -34,7 +37,7 @@ public class StarPage {
     }
 
     public void contentInProfileIsVisible() {
-        $(xpath("//*[text() = '" + UserConfig.USER_NAME + " " + UserConfig.USER_LASTNAME + "']")).shouldBe(Condition.visible);
+        $(xpath("//*[text() = '" + UserConfig.USER_NAME + " " + UserConfig.USER_LASTNAME + "']")).shouldBe(Condition.visible); //LOOK THIS METHOD
 
     }
 
