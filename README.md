@@ -1,7 +1,7 @@
 # CucumberJUnit
 
 ## Информация
-Реализация теста с использованием JUnit, Selenide, Cucumber и Allure Reports.
+Реализация теста с использованием JUnit, Selenide, Cucumber и Allure Reports. В качестве сборщика - Maven.
 
 ### Описание
 Простенький Cucumber проект с использованием BDD-подхода, состоит из двух частей – это текстовые файлы с описанием сценариев 
