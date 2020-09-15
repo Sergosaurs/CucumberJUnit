@@ -19,8 +19,8 @@ public class StarPage {
         $(xpath("//button[@data-qa='mainmenu_applicantProfile ']")).click();
     }
 
-    public void universalButton(String text) {
-        $(xpath("(//*[contains(text(), '" + text + "')])[1]")).click();
+    public void clickByTextButton(String text) {
+        $(xpath("//*[contains(text(), '" + text + "')]")).click();
     }
 
     public void contentIsVisible(String text) {

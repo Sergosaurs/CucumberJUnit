@@ -19,7 +19,7 @@ public class StartPageDefs {
 
     @И("жмем на {string} кнопку")
     public void clickButtons(String arg0) {
-        startPage.universalButton(arg0);
+        startPage.clickByTextButton(arg0);
     }
 
     @Затем("жмем на {string}")

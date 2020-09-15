@@ -15,11 +15,4 @@ public class SignUpPage {
     public void checkForFilledFields(String text) {
         $(xpath("//input[@placeholder='"+ text +"']")).shouldNotBe(Condition.empty);
     }
-
-
-    public void contentVisibility(String text) {
-        $(xpath("(//*[text() = '" + text + "'])[2]")).shouldBe(Condition.visible);
-    }
-
-
 }
